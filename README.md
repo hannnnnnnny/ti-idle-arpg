@@ -15,6 +15,23 @@ and story are original.
 > 十五幕剧情、楼层事件、悬赏与成就、可玩 300 小时以上；支持简体中文、繁體中文、English、
 > 日本語、한국어。下方动图与截图均为游戏本身渲染的真实画面。
 
+## Download (一键下载)
+
+<p align="center">
+  <a href="https://github.com/hannnnnnnny/ti-idle-arpg/releases/latest/download/AshenDepths-TI-Nspire.zip"><img src="https://img.shields.io/badge/%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-TI--Nspire%20CX%20zip-e8590c?style=for-the-badge" alt="Download zip"></a>
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/AshenDepths-Windows.zip"><img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E7%89%88-Windows%20zip-1971c2?style=for-the-badge&logo=windows" alt="Download Windows zip"></a>
+</p>
+
+**[AshenDepths-TI-Nspire.zip](https://github.com/hannnnnnnny/ti-idle-arpg/releases/latest/download/AshenDepths-TI-Nspire.zip)**
+(about 0.3 MB): `AshenDepths.tns` and a short install guide (Ndless required,
+see [Install on the calculator](#install-on-the-calculator)). Want to play on
+a PC with keyboard, mouse and sound? Grab
+**[AshenDepths-Windows.zip](https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/AshenDepths-Windows.zip)**
+from [ARPG-CX](https://github.com/hannnnnnnny/ARPG-CX).
+
+> 中文：点上面的按钮直接下载 zip。计算器版需先装 Ndless，把 `AshenDepths.tns` 拷进 ndless 文件夹即可；
+> 想在电脑上用键盘鼠标玩，下载蓝色按钮的 Windows 版，解压双击 exe 就能玩。
+
 ## Demo
 
 <p align="center">

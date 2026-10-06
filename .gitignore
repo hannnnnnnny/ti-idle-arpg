@@ -15,3 +15,5 @@ platform/nspire/*.tns
 screenshots/
 !tests/fixtures/*.sav
 shots/
+# Release zips are uploaded to GitHub releases, not committed
+dist/*.zip
