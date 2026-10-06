@@ -32,6 +32,19 @@ from [ARPG-CX](https://github.com/hannnnnnnny/ARPG-CX).
 > 中文：点上面的按钮直接下载 zip。计算器版需先装 Ndless，把 `AshenDepths.tns` 拷进 ndless 文件夹即可；
 > 想在电脑上用键盘鼠标玩，下载蓝色按钮的 Windows 版，解压双击 exe 就能玩。
 
+## Promo video (宣传视频)
+
+<p align="center">
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/blob/main/docs/media/promo.mp4"><img src="docs/media/promo_poster.jpg" width="270" alt="Promo video: click to play"></a>
+  <br><em>32 s, 1080x1920, with the game's own sound effects.
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/blob/main/docs/media/promo.mp4">Play</a> · <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/ashen_depths_promo.mp4">Download mp4</a></em>
+</p>
+
+Every shot is recorded from the game itself and scored with its synthesized
+effects (`python tools/media/make_video.py` in ARPG-CX rebuilds it).
+
+> 中文：点击上图观看 32 秒竖屏宣传视频（有声）；画面全部为游戏实机录制，音效来自游戏本身的合成音效。
+
 ## Demo
 
 <p align="center">
