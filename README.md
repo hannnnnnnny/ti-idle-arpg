@@ -11,6 +11,47 @@ gains when you come back.
 The systems follow Diablo IV's design. All code, pixel art, names, items
 and story are original.
 
+> 中文：为 TI-Nspire CX 计算器打造的原创放置 ARPG，系统对标暗黑破坏神 4：六大职业、
+> 十五幕剧情、楼层事件、悬赏与成就、可玩 300 小时以上；支持简体中文、繁體中文、English、
+> 日本語、한국어。下方动图与截图均为游戏本身渲染的真实画面。
+
+## Demo
+
+<p align="center">
+  <img src="docs/media/gameplay.gif" width="640" alt="The hero fighting through a floor: an ambush, damage numbers, gold">
+  <br><em>Idle battle on floor 28: an ambush, critical and overpower hits, gold and remarks</em>
+</p>
+
+<table>
+  <tr>
+    <td><img src="docs/media/new_game.gif" width="400" alt="Title, class select, character creation, act I"></td>
+    <td><img src="docs/media/late_game.gif" width="400" alt="Torment IV after 120 hours"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>New game: title, class, appearance, act I subtitles</em></td>
+    <td align="center"><em>Hour 120: Torment IV, a guardian, glyph level 100</em></td>
+  </tr>
+  <tr>
+    <td><img src="docs/media/menus.gif" width="400" alt="Menu pages"></td>
+    <td><img src="docs/media/languages.png" width="400" alt="The same screen in five languages"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Hero, bag, skills, paragon, town, goals, embers</em></td>
+    <td align="center"><em>English, 简体中文, 繁體中文, 日本語, 한국어</em></td>
+  </tr>
+</table>
+
+| Title | Battle | Hero |
+|---|---|---|
+| ![Title](docs/media/title.png) | ![Battle](docs/media/battle.png) | ![Hero](docs/media/hero.png) |
+| **Skills** | **Paragon** | **Goals** |
+| ![Skills](docs/media/skills.png) | ![Paragon](docs/media/paragon.png) | ![Goals](docs/media/goals.png) |
+
+Every frame above is rendered by the game's own code at the calculator's
+320x240 (shown 2x) through the headless runner, the same renderer the
+`.tns` uses; it is not camera footage of a calculator.
+`python tools/media/make_media.py` regenerates all of it after a build.
+
 ## Status
 
 | Target | State |
