@@ -52,13 +52,46 @@ Every frame above is rendered by the game's own code at the calculator's
 `.tns` uses; it is not camera footage of a calculator.
 `python tools/media/make_media.py` regenerates all of it after a build.
 
+## Meta builds (版本强势流派)
+
+Three signature builds sit at the top of the ladder. Each is switched on
+by a **build-defining unique** (dropped by act bosses and guardians) and
+pushed further by two class aspects. The signature only wakes with its
+skill on the bar; then it reshapes that skill, makes the hero far tougher
+([x]8 life, 40% damage reduction) and throws huge, outlined numbers.
+
+<table>
+  <tr>
+    <td><img src="docs/media/meta_storm_werewolf.gif" width="300" alt="Storm Werewolf druid fighting an act boss"></td>
+    <td><img src="docs/media/meta_bone_spear.gif" width="300" alt="Bone Spear necromancer"></td>
+    <td><img src="docs/media/meta_inferno.gif" width="300" alt="Inferno sorcerer"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>风暴狼德 Storm Werewolf</b></td>
+    <td align="center"><b>骨刺死灵 Bone Spear</b></td>
+    <td align="center"><b>火法 Inferno</b></td>
+  </tr>
+</table>
+
+| Build | Unique | What it does | Aspects |
+|---|---|---|---|
+| Storm Werewolf (druid, preset STORM WEREWOLF) | Stormhowl Pelt (chest) | Shred becomes free lightning; every hit calls a forked bolt from the sky that heals and shields (life barely moves); Shred lunges at foes up to 80 px away | Stormclaw: bolts chain further. Moonlit Hunt: barrier per bolt, +15% speed |
+| Bone Spear (necromancer, preset BONE SPEAR) | Spine of the First Keeper (weapon) | Spears burst into a fan of bone shards, crits erupt in a bone nova that feeds you, every sixth spear is a giant | Splintered Bone: more shards, shards pierce. Marrow Well: novas restore essence and life |
+| Inferno (sorcerer, preset PYROMANCER) | Heart of the Inferno (amulet) | Fireballs explode twice and call meteors (screen flash and shake) | Firestorm: meteor showers. Phoenix: burning foes explode on death |
+
+Worn, the unique grows with you: every guardian re-forges it to the
+floor's item level (tempers and masterwork kept), and auto equip never
+swaps it for ordinary gear. In the long-run simulator (300 hours, all 18
+builds) the three lead the ladder from about hour 25 to hour 200 and stay
+at the top after that.
+
 ## Status
 
 | Target | State |
 |---|---|
 | Ndless build `AshenDepths.tns` | Compiles with the official Ndless SDK (GCC 14.2), zero warnings |
 | Windows desktop simulator | Builds and runs; every screen checked with the headless renderer |
-| Tests | 313,753 checks pass: loot rules, crafting, skill tree, paragon, paragon mastery and glyph levels, damage pipeline, floor events, bounties and achievements, offline gains, saves (v7 plus real v1/v3 saves converted), every translation's format, glyphs and line width, 200 connected floors, 2-hour idle runs for all 6 classes |
+| Tests | 314,533 checks pass: signature builds, loot rules, crafting, skill tree, paragon, paragon mastery and glyph levels, damage pipeline, floor events, bounties and achievements, offline gains, saves (v7 plus real v1/v3 saves converted), every translation's format, glyphs and line width, 200 connected floors, 2-hour idle runs for all 6 classes |
 | Physical TI-Nspire CX CAS | Earlier versions ran on the owner's calculator; this version is not yet tested on hardware |
 
 ## Classes (6) and builds (3 each)

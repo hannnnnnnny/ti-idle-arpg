@@ -32,6 +32,13 @@ CLIPS = [
     ('new_game', ['--save', os.path.join(TMP, 'fresh.sav')] + ZH + ['--script', NEW_GAME], (40, 126, 5), 140),
     ('menus', ['--new', '--class', '1', '--fast', '1.5'] + ZH + ['--script', MENU_TOUR], (36, 80, 4), 160),
     ('late_game', ['--new', '--class', '2', '--fast', '120'] + ZH + ['--script', '-:400'], (30, 110, 3), 100),
+    # the three signature builds, wearing their build-defining uniques
+    ('meta_storm_werewolf', ['--new', '--class', '4', '--preset', '2', '--fast', '0.6', '--sig'] + ZH
+     + ['--script', '-:600'], (180, 120, 3), 100),
+    ('meta_bone_spear', ['--new', '--class', '3', '--preset', '0', '--fast', '0.5', '--sig'] + ZH
+     + ['--script', '-:1100'], (640, 120, 3), 100),
+    ('meta_inferno', ['--new', '--class', '1', '--preset', '0', '--fast', '0.4', '--sig'] + ZH
+     + ['--script', '-:500'], (20, 120, 3), 100),
 ]
 
 SHOTS = [
