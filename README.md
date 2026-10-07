@@ -1,5 +1,7 @@
 # ASHEN DEPTHS
 
+**English** | [简体中文](README.zh-CN.md)
+
 An original idle / auto-battler action RPG for the **TI-Nspire CX / CX CAS
 (first generation)**, built around the systems of Diablo IV. Your hero
 descends endless procedurally generated dungeon floors alone: pathfinding,
@@ -11,15 +13,12 @@ gains when you come back.
 The systems follow Diablo IV's design. All code, pixel art, names, items
 and story are original.
 
-> 中文：为 TI-Nspire CX 计算器打造的原创放置 ARPG，系统对标暗黑破坏神 4：六大职业、
-> 十五幕剧情、楼层事件、悬赏与成就、可玩 300 小时以上；支持简体中文、繁體中文、English、
-> 日本語、한국어。下方动图与截图均为游戏本身渲染的真实画面。
 
-## Download (一键下载)
+## Download
 
 <p align="center">
-  <a href="https://github.com/hannnnnnnny/ti-idle-arpg/releases/latest/download/AshenDepths-TI-Nspire.zip"><img src="https://img.shields.io/badge/%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-TI--Nspire%20CX%20zip-e8590c?style=for-the-badge" alt="Download zip"></a>
-  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/AshenDepths-Windows.zip"><img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E7%89%88-Windows%20zip-1971c2?style=for-the-badge&logo=windows" alt="Download Windows zip"></a>
+  <a href="https://github.com/hannnnnnnny/ti-idle-arpg/releases/latest/download/AshenDepths-TI-Nspire.zip"><img src="https://img.shields.io/badge/Download-TI--Nspire%20CX%20zip-e8590c?style=for-the-badge" alt="Download zip"></a>
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/AshenDepths-Windows.zip"><img src="https://img.shields.io/badge/Windows%20version-Windows%20zip-1971c2?style=for-the-badge&logo=windows" alt="Download Windows zip"></a>
 </p>
 
 **[AshenDepths-TI-Nspire.zip](https://github.com/hannnnnnnny/ti-idle-arpg/releases/latest/download/AshenDepths-TI-Nspire.zip)**
@@ -29,41 +28,37 @@ a PC with keyboard, mouse and sound? Grab
 **[AshenDepths-Windows.zip](https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/AshenDepths-Windows.zip)**
 from [ARPG-CX](https://github.com/hannnnnnnny/ARPG-CX).
 
-> 中文：点上面的按钮直接下载 zip。计算器版需先装 Ndless，把 `AshenDepths.tns` 拷进 ndless 文件夹即可；
-> 想在电脑上用键盘鼠标玩，下载蓝色按钮的 Windows 版，解压双击 exe 就能玩。
 
-## Promo video (宣传视频)
+## Promo video
 
 <p align="center">
-  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/ashen_depths_promo.mp4"><img src="https://raw.githubusercontent.com/hannnnnnnny/ARPG-CX/main/docs/media/promo.gif" width="300" alt="Promo video preview"></a>
-  <br><em>32 s, 1080x1920. The preview above is silent:
-  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/ashen_depths_promo.mp4"><b>download the mp4 with sound</b></a></em>
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/ashen_depths_promo_en.mp4"><img src="https://raw.githubusercontent.com/hannnnnnnny/ARPG-CX/main/docs/media/promo_en.gif" width="300" alt="Promo video preview"></a>
+  <br><em>32 s, 1080x1920, English. The preview above is silent:
+  <a href="https://github.com/hannnnnnnny/ARPG-CX/releases/latest/download/ashen_depths_promo_en.mp4"><b>download the mp4 with sound</b></a></em>
 </p>
 
 Every shot is recorded from the game itself and scored with its synthesized
-effects (`python tools/media/make_video.py` in ARPG-CX rebuilds it).
+effects (`python tools/media/make_video.py --en` in ARPG-CX rebuilds it).
 
-> 中文：上图为宣传视频的无声预览，点击图片或"download the mp4 with sound"下载 32 秒竖屏有声完整版；
-> 画面全部为游戏实机录制，音效来自游戏本身的合成音效。
 
 ## Demo
 
 <p align="center">
-  <img src="docs/media/gameplay.gif" width="640" alt="The hero fighting through a floor: an ambush, damage numbers, gold">
+  <img src="docs/media/gameplay_en.gif" width="640" alt="The hero fighting through a floor: an ambush, damage numbers, gold">
   <br><em>Idle battle on floor 28: an ambush, critical and overpower hits, gold and remarks</em>
 </p>
 
 <table>
   <tr>
-    <td><img src="docs/media/new_game.gif" width="400" alt="Title, class select, character creation, act I"></td>
-    <td><img src="docs/media/late_game.gif" width="400" alt="Torment IV after 120 hours"></td>
+    <td><img src="docs/media/new_game_en.gif" width="400" alt="Title, class select, character creation, act I"></td>
+    <td><img src="docs/media/late_game_en.gif" width="400" alt="Torment IV after 120 hours"></td>
   </tr>
   <tr>
     <td align="center"><em>New game: title, class, appearance, act I subtitles</em></td>
     <td align="center"><em>Hour 120: Torment IV, a guardian, glyph level 100</em></td>
   </tr>
   <tr>
-    <td><img src="docs/media/menus.gif" width="400" alt="Menu pages"></td>
+    <td><img src="docs/media/menus_en.gif" width="400" alt="Menu pages"></td>
     <td><img src="docs/media/languages.png" width="400" alt="The same screen in five languages"></td>
   </tr>
   <tr>
@@ -74,16 +69,17 @@ effects (`python tools/media/make_video.py` in ARPG-CX rebuilds it).
 
 | Title | Battle | Hero |
 |---|---|---|
-| ![Title](docs/media/title.png) | ![Battle](docs/media/battle.png) | ![Hero](docs/media/hero.png) |
+| ![Title](docs/media/title_en.png) | ![Battle](docs/media/battle_en.png) | ![Hero](docs/media/hero_en.png) |
 | **Skills** | **Paragon** | **Goals** |
-| ![Skills](docs/media/skills.png) | ![Paragon](docs/media/paragon.png) | ![Goals](docs/media/goals.png) |
+| ![Skills](docs/media/skills_en.png) | ![Paragon](docs/media/paragon_en.png) | ![Goals](docs/media/goals_en.png) |
 
 Every frame above is rendered by the game's own code at the calculator's
 320x240 (shown 2x) through the headless runner, the same renderer the
 `.tns` uses; it is not camera footage of a calculator.
-`python tools/media/make_media.py` regenerates all of it after a build.
+`python tools/media/make_media.py --en` regenerates these English shots after a build
+(without `--en`, the Chinese ones of README.zh-CN.md).
 
-## Meta builds (版本强势流派)
+## Meta builds
 
 Three signature builds sit at the top of the ladder. Each is switched on
 by a **build-defining unique** (dropped by act bosses and guardians) and
@@ -96,14 +92,14 @@ x300 on floor 300; RESONANCE on the HUD).
 
 <table>
   <tr>
-    <td><img src="docs/media/meta_storm_werewolf.gif" width="300" alt="Storm Werewolf druid fighting an act boss"></td>
-    <td><img src="docs/media/meta_bone_spear.gif" width="300" alt="Bone Spear necromancer"></td>
-    <td><img src="docs/media/meta_inferno.gif" width="300" alt="Inferno sorcerer"></td>
+    <td><img src="docs/media/meta_storm_werewolf_en.gif" width="300" alt="Storm Werewolf druid fighting an act boss"></td>
+    <td><img src="docs/media/meta_bone_spear_en.gif" width="300" alt="Bone Spear necromancer"></td>
+    <td><img src="docs/media/meta_inferno_en.gif" width="300" alt="Inferno sorcerer"></td>
   </tr>
   <tr>
-    <td align="center"><b>风暴狼德 Storm Werewolf</b></td>
-    <td align="center"><b>骨刺死灵 Bone Spear</b></td>
-    <td align="center"><b>火法 Inferno</b></td>
+    <td align="center"><b>Storm Werewolf</b></td>
+    <td align="center"><b>Bone Spear</b></td>
+    <td align="center"><b>Inferno</b></td>
   </tr>
 </table>
 
@@ -125,18 +121,18 @@ no rebirth) puts the three far ahead of everything else:
 | Inferno | 296 | 424 | 615 |
 | best other build | 263 | 303 | 469 |
 
-## Season: mythics, the Fleshrender, packed floors (赛季内容)
+## Season: mythics, the Fleshrender, packed floors
 
 <table>
   <tr>
-    <td><img src="docs/media/season_mythic.gif" width="300" alt="Mythic powers: stars, singularity, chain lightning"></td>
-    <td><img src="docs/media/season_butcher.gif" width="300" alt="The Fleshrender hunts the hero"></td>
-    <td><img src="docs/media/season_harvest.gif" width="300" alt="Blood harvest event"></td>
+    <td><img src="docs/media/season_mythic_en.gif" width="300" alt="Mythic powers: stars, singularity, chain lightning"></td>
+    <td><img src="docs/media/season_butcher_en.gif" width="300" alt="The Fleshrender hunts the hero"></td>
+    <td><img src="docs/media/season_harvest_en.gif" width="300" alt="Blood harvest event"></td>
   </tr>
   <tr>
-    <td align="center"><b>超级先祖暗金 Mythic powers</b></td>
-    <td align="center"><b>剁肉屠夫 The Fleshrender</b></td>
-    <td align="center"><b>嗜血收割 Blood harvest</b></td>
+    <td align="center"><b>Mythic powers</b></td>
+    <td align="center"><b>The Fleshrender</b></td>
+    <td align="center"><b>Blood harvest</b></td>
   </tr>
 </table>
 
@@ -173,7 +169,7 @@ from the Fleshrender; the simulator finds 5-27 over 300 hours. A mythic
 drop shakes the screen, auto equip always puts one on and never takes it
 off for ordinary gear.
 
-**The Fleshrender** (屠夫), a rare butcher in the spirit of Diablo IV's:
+**The Fleshrender**, a rare butcher in the spirit of Diablo IV's:
 about one ordinary floor in forty from floor 20, never a guardian floor.
 He walks in, hunts the hero across the map, throws a chain that drags the
 hero to his cleaver, enrages below 40% life and pays out like a guardian
@@ -275,7 +271,8 @@ An original fifteen-act story (Cindermere under the ash): acts I-V end
 with the epilogue on floor 50, acts VI-X (the Torment campaign) with the
 finale on floor 100, and acts XI-XV (the deep) take a whole Torment tier
 each, down to floor 350. Forty lost pages lie beside fallen adventurers;
-the last twenty-four only turn up below floor 100, one every ten floors. The story plays as subtitles over the battle; nothing waits for a
+the last twenty-four only turn up below floor 100, one every ten floors.
+The story plays as subtitles over the battle; nothing waits for a
 key press. OPTIONS > STORY switches to full pages, OPTIONS > JOURNAL
 rereads chapters and pages.
 
@@ -367,7 +364,7 @@ those of the fonts it builds on are in `assets/fonts/`.
 
 Ndless must already be installed. Copy `AshenDepths.tns` into the `ndless`
 folder with TI-Nspire Computer Link (replace the old one), then open it from
-My Documents. Saves `AshenDepths1.sav.tns` to `AshenDepths3.sav.tns` sit
+My Documents. Saves `AshenDepths1.sav.tns` to `AshenDepths15.sav.tns` sit
 next to it and are converted on first load.
 
 ## Build
@@ -387,5 +384,3 @@ Curves and prices live in `src/game/balance.c`; skill numbers in
 Code, pixel art and story: [MIT](LICENSE) (c) 2026 Yi Han. The bundled pixel
 fonts keep their own SIL Open Font License 1.1 (see `assets/fonts*/`).
 
-> 中文：代码、像素美术与剧情采用 MIT 许可证开源，可自由使用、修改和分发，保留版权声明即可；
-> 内置像素字体沿用各自的 SIL OFL 1.1 许可证。

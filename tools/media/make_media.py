@@ -1,6 +1,7 @@
 """Regenerate the README screenshots and clips in docs/media.
 
     sh tools/build_host.sh && python tools/media/make_media.py   (project root)
+    python tools/media/make_media.py --en     (English UI, *_en files for README.md)
 
 Everything is rendered by the game itself through the headless runner
 (build/ad_headless), frame by frame, at the calculator's 320x240 and shown
@@ -18,7 +19,9 @@ RUNNER = os.path.join('build', 'ad_headless.exe' if os.name == 'nt' else 'ad_hea
 OUT = os.path.join('docs', 'media')
 TMP = os.path.join('build', 'media_tmp')
 SCALE = 2
-ZH = ['--lang', '1']
+EN = '--en' in sys.argv          # English UI, files named *_en (README.md); default Chinese (README.zh-CN.md)
+LANG = ['--lang', '0' if EN else '1']
+SUFFIX = '_en' if EN else ''
 
 # New game through the title, the save slot, class select and creation,
 # into act I with its subtitles.
@@ -28,35 +31,35 @@ MENU_TOUR = '-:40 T:2 -:40 T:2 -:40 T:2 -:40 T:2 -:40 T:2 -:40 T:2 -:40 T:2 -:40
 
 CLIPS = [
     # name, runner args, (first tick, frames, ticks per frame), ms per frame
-    ('gameplay', ['--new', '--class', '0', '--fast', '0.25'] + ZH + ['--script', '-:300'], (0, 125, 2), 66),
-    ('new_game', ['--save', os.path.join(TMP, 'fresh.sav')] + ZH + ['--script', NEW_GAME], (40, 126, 5), 140),
-    ('menus', ['--new', '--class', '1', '--fast', '1.5'] + ZH + ['--script', MENU_TOUR], (36, 80, 4), 160),
-    ('late_game', ['--new', '--class', '2', '--fast', '120'] + ZH + ['--script', '-:400'], (30, 110, 3), 100),
+    ('gameplay', ['--new', '--class', '0', '--fast', '0.25'] + LANG + ['--script', '-:300'], (0, 125, 2), 66),
+    ('new_game', ['--save', os.path.join(TMP, 'fresh.sav')] + LANG + ['--script', NEW_GAME], (40, 126, 5), 140),
+    ('menus', ['--new', '--class', '1', '--fast', '1.5'] + LANG + ['--script', MENU_TOUR], (36, 80, 4), 160),
+    ('late_game', ['--new', '--class', '2', '--fast', '120'] + LANG + ['--script', '-:400'], (30, 110, 3), 100),
     # the three signature builds, wearing their build-defining uniques
-    ('meta_storm_werewolf', ['--new', '--class', '4', '--preset', '2', '--fast', '0.6', '--sig'] + ZH
+    ('meta_storm_werewolf', ['--new', '--class', '4', '--preset', '2', '--fast', '0.6', '--sig'] + LANG
      + ['--script', '-:600'], (180, 120, 3), 100),
-    ('meta_bone_spear', ['--new', '--class', '3', '--preset', '0', '--fast', '0.5', '--sig'] + ZH
+    ('meta_bone_spear', ['--new', '--class', '3', '--preset', '0', '--fast', '0.5', '--sig'] + LANG
      + ['--script', '-:1100'], (640, 120, 3), 100),
-    ('meta_inferno', ['--new', '--class', '1', '--preset', '0', '--fast', '0.4', '--sig'] + ZH
+    ('meta_inferno', ['--new', '--class', '1', '--preset', '0', '--fast', '0.4', '--sig'] + LANG
      + ['--script', '-:500'], (20, 120, 3), 100),
     # season content: the Fleshrender, mythic powers, a blood harvest
-    ('season_butcher', ['--new', '--class', '0', '--fast', '1.5', '--butcher'] + ZH + ['--script', '-:900'],
+    ('season_butcher', ['--new', '--class', '0', '--fast', '1.5', '--butcher'] + LANG + ['--script', '-:900'],
      (20, 120, 3), 100),
-    ('season_mythic', ['--new', '--class', '3', '--preset', '1', '--fast', '1.0', '--mythic', '1,5,9,11,16'] + ZH
+    ('season_mythic', ['--new', '--class', '3', '--preset', '1', '--fast', '1.0', '--mythic', '1,5,9,11,16'] + LANG
      + ['--script', '-:900'], (330, 120, 3), 100),
-    ('season_harvest', ['--new', '--class', '0', '--fast', '0.8', '--event', '6'] + ZH + ['--script', '-:700'],
+    ('season_harvest', ['--new', '--class', '0', '--fast', '0.8', '--event', '6'] + LANG + ['--script', '-:700'],
      (40, 120, 3), 100),
 ]
 
 SHOTS = [
     # name, runner args, tick
-    ('title', ['--save', os.path.join(TMP, 'fresh.sav')] + ZH + ['--script', '-:60'], 50),
-    ('battle', ['--new', '--class', '3', '--fast', '0.5'] + ZH + ['--script', '-:200'], 150),
-    ('hero', ['--new', '--class', '3', '--fast', '1.5'] + ZH + ['--script', '-:40 T:2 -:30'], 70),
-    ('skills', ['--new', '--class', '1', '--fast', '1.5'] + ZH + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:30'], 80),
-    ('paragon', ['--new', '--class', '4', '--fast', '3'] + ZH + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:30'], 85),
-    ('town', ['--new', '--class', '0', '--fast', '1.5'] + ZH + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:30'], 95),
-    ('goals', ['--new', '--class', '5', '--fast', '6'] + ZH + ['--script', '-:40' + ' T:2 -:5' * 6 + ' -:30'], 105),
+    ('title', ['--save', os.path.join(TMP, 'fresh.sav')] + LANG + ['--script', '-:60'], 50),
+    ('battle', ['--new', '--class', '3', '--fast', '0.5'] + LANG + ['--script', '-:200'], 150),
+    ('hero', ['--new', '--class', '3', '--fast', '1.5'] + LANG + ['--script', '-:40 T:2 -:30'], 70),
+    ('skills', ['--new', '--class', '1', '--fast', '1.5'] + LANG + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:30'], 80),
+    ('paragon', ['--new', '--class', '4', '--fast', '3'] + LANG + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:30'], 85),
+    ('town', ['--new', '--class', '0', '--fast', '1.5'] + LANG + ['--script', '-:40 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:5 T:2 -:30'], 95),
+    ('goals', ['--new', '--class', '5', '--fast', '6'] + LANG + ['--script', '-:40' + ' T:2 -:5' * 6 + ' -:30'], 105),
 ]
 
 LANG_SHOTS = [(lang, ['--new', '--class', '2', '--fast', '0.5', '--lang', str(lang), '--script', '-:40 T:2 -:30'], 70)
@@ -77,7 +80,7 @@ def scaled(path):
 def make_gif(name, frames, ms):
     palette = frames[len(frames) // 2].quantize(colors=255, method=Image.MEDIANCUT)
     q = [f.quantize(palette=palette, dither=Image.NONE) for f in frames]
-    path = os.path.join(OUT, f'{name}.gif')
+    path = os.path.join(OUT, f'{name}{SUFFIX}.gif')
     q[0].save(path, save_all=True, append_images=q[1:], duration=ms, loop=0, optimize=True)
     print(f'{path}: {len(frames)} frames, {os.path.getsize(path) // 1024} KB')
 
@@ -91,7 +94,7 @@ def clip(name, args, rec, ms):
 def shot(name, args, tick):
     path = os.path.join(TMP, name + '.png')
     run(args + ['--shot', f'{tick}:{path}'])
-    scaled(path).save(os.path.join(OUT, name + '.png'))
+    scaled(path).save(os.path.join(OUT, name + SUFFIX + '.png'))
     return path
 
 
@@ -117,7 +120,7 @@ def main():
     for s in SHOTS:
         if only is None or s[0] in only:
             shot(*s)
-    if only is None:
+    if only is None and not EN:
         languages()
     shutil.rmtree(TMP, ignore_errors=True)
 
