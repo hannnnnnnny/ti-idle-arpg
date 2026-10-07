@@ -39,6 +39,13 @@ CLIPS = [
      + ['--script', '-:1100'], (640, 120, 3), 100),
     ('meta_inferno', ['--new', '--class', '1', '--preset', '0', '--fast', '0.4', '--sig'] + ZH
      + ['--script', '-:500'], (20, 120, 3), 100),
+    # season content: the Fleshrender, mythic powers, a blood harvest
+    ('season_butcher', ['--new', '--class', '0', '--fast', '1.5', '--butcher'] + ZH + ['--script', '-:900'],
+     (20, 120, 3), 100),
+    ('season_mythic', ['--new', '--class', '3', '--preset', '1', '--fast', '1.0', '--mythic', '1,5,9,11,16'] + ZH
+     + ['--script', '-:900'], (330, 120, 3), 100),
+    ('season_harvest', ['--new', '--class', '0', '--fast', '0.8', '--event', '6'] + ZH + ['--script', '-:700'],
+     (40, 120, 3), 100),
 ]
 
 SHOTS = [
@@ -100,14 +107,18 @@ def languages():
 
 
 def main():
+    only = sys.argv[sys.argv.index('--only') + 1].split(',') if '--only' in sys.argv else None
     shutil.rmtree(TMP, ignore_errors=True)
     os.makedirs(TMP)
     os.makedirs(OUT, exist_ok=True)
     for c in CLIPS:
-        clip(*c)
+        if only is None or c[0] in only:
+            clip(*c)
     for s in SHOTS:
-        shot(*s)
-    languages()
+        if only is None or s[0] in only:
+            shot(*s)
+    if only is None:
+        languages()
     shutil.rmtree(TMP, ignore_errors=True)
 
 

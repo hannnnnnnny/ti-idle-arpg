@@ -152,7 +152,21 @@ static void battle_story(Game *g, Input *in)
 
 static void battle_tick(Game *g, Input *in, uint32_t now)
 {
-    session_tick(&g->s, &g->p);
+    /* Hit stop: the world holds still for a frame or two after a heavy
+     * blow (screen still shakes). Only live play: simulations and offline
+     * gains tick the session directly. */
+    if (g->hitstop_cool > 0) {
+        g->hitstop_cool--;
+        g->s.w.sig.hitstop = 0;                      /* at most one freeze every 12 frames */
+    }
+    if (g->s.w.sig.hitstop > 0) {
+        if (--g->s.w.sig.hitstop == 0)
+            g->hitstop_cool = 12;
+        if (g->s.w.sig.shake_t > 0)
+            g->s.w.sig.shake_t--;
+    } else {
+        session_tick(&g->s, &g->p);
+    }
     subtitle_tick(g);
     if (++g->autosave_t >= AUTOSAVE_TICKS)
         game_save(g, now);
