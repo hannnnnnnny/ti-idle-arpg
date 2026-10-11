@@ -3,7 +3,7 @@
 **English** | [简体中文](README.zh-CN.md)
 
 An original idle / auto-battler action RPG for the **TI-Nspire CX / CX CAS
-(first generation)**, built around the systems of Diablo IV. Your hero
+(first generation)**, inspired by the systems of Diablo IV. Your hero
 descends endless procedurally generated dungeon floors alone: pathfinding,
 fighting, spending resource on core skills and building it back with basic
 skills, firing cooldowns, looting and taking the stairs. You shape the
@@ -378,6 +378,10 @@ build/ad_sim.exe 2          # 2 idle hours for each of the 18 builds
 
 Curves and prices live in `src/game/balance.c`; skill numbers in
 `src/game/skills.c`; aspects and uniques in `src/game/aspects.c`.
+
+## Disclaimer
+
+Ashen Depths is an independent fan-made project, not affiliated with or endorsed by Blizzard Entertainment or Texas Instruments. Diablo is a trademark of Blizzard Entertainment, Inc.; TI-Nspire is a trademark of Texas Instruments Incorporated. They are named here only to describe the genre and the supported hardware.
 
 ## License
 
